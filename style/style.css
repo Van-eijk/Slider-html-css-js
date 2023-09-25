@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider{
+    height: 50vh;
+    position: relative;
+    /*border: 3px solid black;*/
+}
+
+.slider img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.slider img.active{
+    opacity: 1;
+}
+
+.suivant, .precedent{
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    /*transform: translate(-50%);*/
+    cursor: pointer;
+}
+
+.suivant{
+    right: 1rem;
+}
+
+.precedent{
+    left: 1rem;
+}
