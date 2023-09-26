@@ -70,7 +70,7 @@
     background-color: blueviolet;
     border-radius: 50%;
     opacity: 0;
-    /*transition: .5s;*/
+    transition: .5s;
 
 }
 
