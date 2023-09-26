@@ -41,3 +41,39 @@
 .precedent{
     left: 1rem;
 }
+
+.slider-step{
+    margin-top: 10px;
+    /*height: 20px;*/
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step{
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+    margin: 0px 10px 0px 10px;
+    border: 6px solid greenyellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*box-shadow: 2px 2px 2px black;*/
+}
+
+.stepOn{
+    height: 30px;
+    width: 30px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    opacity: 0;
+
+}
+
+.stepOn.active{
+    opacity: 1;
+    background-color: blueviolet;
+}

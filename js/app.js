@@ -1,5 +1,7 @@
 let imageSlider = document.getElementsByClassName("imageSlider"); // on recupère toutes les images dans une tableau
 
+let stepOn = document.getElementsByClassName("stepOn"); // Permet d'indiquer l'etape où on se trouve
+
 let etape = 0; // permet de savoir quelle image afficher
 
 let nombreImage = imageSlider.length; // On récupère le nombre d'image qui est égale à la taille du tableau
@@ -9,6 +11,7 @@ let nombreImage = imageSlider.length; // On récupère le nombre d'image qui est
 function enleverActiveImage() {
     for (let i = 0; i < nombreImage; i++) {
         imageSlider[i].classList.remove('active');
+        stepOn[i].classList.remove('active');
     }
 }
 
