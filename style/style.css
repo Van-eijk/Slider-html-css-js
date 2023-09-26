@@ -45,7 +45,7 @@
 .slider-step{
     margin-top: 10px;
     /*height: 20px;*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +70,7 @@
     background-color: blueviolet;
     border-radius: 50%;
     opacity: 0;
+    /*transition: .5s;*/
 
 }
 

@@ -11,7 +11,9 @@ let nombreImage = imageSlider.length; // On récupère le nombre d'image qui est
 function enleverActiveImage() {
     for (let i = 0; i < nombreImage; i++) {
         imageSlider[i].classList.remove('active');
-        stepOn[i].classList.remove('active');
+
+
+        stepOn[i].classList.remove('active'); // On desactive tous les niveaux d'indicateurs
     }
 }
 
@@ -28,6 +30,7 @@ suivant.addEventListener('click', function () {
     }
     enleverActiveImage(); // On désactive toutes les images
     imageSlider[etape].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
+    stepOn[etape].classList.add('active'); // On active uniquement le niveau d'indicateur correspondant à l'image affichée
 });
 
 
@@ -43,6 +46,7 @@ precedent.addEventListener('click', function () {
     enleverActiveImage(); // On désactive toutes les images
 
     imageSlider[etape].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
+    stepOn[etape].classList.add('active'); // On active uniquement le niveau d'indicateur correspondant à l'image affichée
 });
 
 // la fonction suivante nous permet de defiler les images automatiquement
@@ -54,4 +58,5 @@ setInterval(function () {
     }
     enleverActiveImage();
     imageSlider[etape].classList.add('active');
-}, 2000);
+    stepOn[etape].classList.add('active');
+}, 3000);
