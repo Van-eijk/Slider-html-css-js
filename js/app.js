@@ -2,36 +2,47 @@ let imageSlider = document.getElementsByClassName("imageSlider"); // on recupèr
 
 let etape = 0; // permet de savoir quelle image afficher
 
-let nombreImage = imageSlider.length;
+let nombreImage = imageSlider.length; // On récupère le nombre d'image qui est égale à la taille du tableau
 
+
+// La fonction suivante permet de désactiver toutes les images
 function enleverActiveImage() {
     for (let i = 0; i < nombreImage; i++) {
         imageSlider[i].classList.remove('active');
     }
 }
 
-let suivant = document.querySelector('.suivant');
-let precedent = document.querySelector('.precedent');
+let suivant = document.querySelector('.suivant');  // On recupère le bouton suivant
+let precedent = document.querySelector('.precedent'); // On recupère le bouton precedent
 
+
+// la fonction suivante permet de passer de l'image actuelle à l'image suivante
 suivant.addEventListener('click', function () {
-    etape++;
+    etape++; // On incremente le numero de l'etape
     if (etape >= nombreImage) {
+        // Si l'etape est superieur ou egale au nombre total d'images, on ramene l'etape à zero pour éviter d'afficher une image qui n'existe pas
         etape = 0;
     }
-    enleverActiveImage();
-    imageSlider[etape].classList.add('active');
+    enleverActiveImage(); // On désactive toutes les images
+    imageSlider[etape].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
 });
 
+
+
+// la fonction suivante nous permet de passer de l'image actuelle à l'image precedente
 
 precedent.addEventListener('click', function () {
-    etape--;
+    etape--;  // On décremente l'etape
     if (etape < 0) {
-        etape = nombreImage - 1;
+        // Si l'etape est inferieur à 0, on ramene l'etape au numéro correspondant à la derniere image
+        etape = nombreImage - 1; // l'etape est egale à la taille du tableau moins 1
     }
-    enleverActiveImage();
-    imageSlider[etape].classList.add('active');
+    enleverActiveImage(); // On désactive toutes les images
+
+    imageSlider[etape].classList.add('active'); // On active uniquement l'image correspondant à l'etape actuelle
 });
 
+// la fonction suivante nous permet de defiler les images automatiquement
 
 setInterval(function () {
     etape++;
